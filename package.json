@@ -1,15 +1,16 @@
 {
-  "name": "back-end",
-  "version": "1.0.0",
-  "description": "",
+  "name": "react-auth-101-back",
+  "author": {
+    "name": "Yuriy Vyatkin"
+  },
+  "license": "Mozilla Public License 2.0",
+  "repository": "https://yuriyvyatkin.github.io/react-auth-101-back",
+  "homepage": "https://gitname.github.io/react-auth-101-back",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node ./src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@babel/core": "7.13.10",
     "@babel/node": "7.13.12",

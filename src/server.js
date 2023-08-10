@@ -1,10 +1,19 @@
 import express from 'express';
 import { routes } from './routes';
 import { initializeDbConnection } from './db';
+const cors = require('cors');
 
 const PORT = process.env.PORT || 8080;
 
 const app = express();
+
+app.use(
+  cors({
+    origin: 'http://localhost:7000',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  }),
+);
 
 // This allows us to access the body of POST/PUT
 // requests in our route handlers (as req.body)

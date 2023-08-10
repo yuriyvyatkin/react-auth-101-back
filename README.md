@@ -18,6 +18,8 @@ https://www.linkedin.com/learning/react-authentication/
 * обработка ошибок;
 * защита БД.
 
+Frontend часть приложения: https://github.com/yuriyvyatkin/react-auth-101-front
+
 **📚 Инструкция по запуску**
 
 ##### 1. Клонирование

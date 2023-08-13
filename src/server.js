@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: 'http://localhost:7000',
+    origin: process.env.FRONTEND_BASE_URL,
     methods: ['GET', 'POST', 'PUT'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   }),

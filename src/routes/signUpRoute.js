@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { v4 as uuid } from 'uuid';
 import { getDbConnection } from '../db';
-import { sendEmail } from '../util/sendEmail';
+import { sendEmail } from '../utils/sendEmail';
 
 export const signUpRoute = {
   path: '/api/signup',
@@ -43,7 +43,7 @@ export const signUpRoute = {
         subject: 'Please verify your email',
         text: `
                     Thanks for signing up! To verify your email, click here:
-                    http://localhost:7000/verify-email/${verificationString}
+                    ${process.env.FRONTEND_BASE_URL}/verify-email/${verificationString}
                 `,
       });
     } catch (e) {

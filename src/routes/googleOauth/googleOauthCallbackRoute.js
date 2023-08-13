@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
-import { getGoogleUser } from '../util/getGoogleUser';
-import { updateOrCreateUserFromOauth } from '../util/updateOrCreateUserFromOauth';
+import { getGoogleUser } from '../../utils/getGoogleUser';
+import { updateOrCreateUserFromOauth } from '../../utils/updateOrCreateUserFromOauth';
 
 export const googleOauthCallbackRoute = {
   path: '/auth/google/callback',
@@ -17,7 +17,7 @@ export const googleOauthCallbackRoute = {
       process.env.JWT_SECRET,
       (err, token) => {
         if (err) return res.sendStatus(500);
-        res.redirect(`http://localhost:7000/login?token=${token}`);
+        res.redirect(`${process.env.FRONTEND_BASE_URL}/login?token=${token}`);
       },
     );
   },

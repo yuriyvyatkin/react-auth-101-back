@@ -1,12 +1,12 @@
 import { logInRoute } from './logInRoute';
 import { signUpRoute } from './signUpRoute';
-import { testRoute } from './testRoute';
+import { testRoute } from './testRoutes/testRoute';
 import { updateUserInfoRoute } from './updateUserInfoRoute';
 import { verifyEmailRoute } from './verifyEmailRoute';
 import { forgotPasswordRoute } from './forgotPasswordRoute';
 import { resetPasswordRoute } from './resetPasswordRoute';
-import { getGoogleOauthUrlRoute } from './getGoogleOauthUrlRoute';
-import { googleOauthCallbackRoute } from './googleOauthCallbackRoute';
+import { getGoogleOauthUrlRoute } from './googleOauth/getGoogleOauthUrlRoute';
+import { googleOauthCallbackRoute } from './googleOauth/googleOauthCallbackRoute';
 
 export const routes = [
   logInRoute,

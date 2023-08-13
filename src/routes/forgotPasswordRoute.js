@@ -1,5 +1,5 @@
 import { v4 as uuid } from 'uuid';
-import { sendEmail } from '../util/sendEmail';
+import { sendEmail } from '../utils/sendEmail';
 import { getDbConnection } from '../db';
 
 export const forgotPasswordRoute = {
@@ -23,7 +23,7 @@ export const forgotPasswordRoute = {
           subject: 'Password Reset',
           text: `
                         To reset your password, click this link:
-                        http://localhost:7000/reset-password/${passwordResetCode}
+                        ${process.env.FRONTEND_BASE_URL}/reset-password/${passwordResetCode}
                     `,
         });
       } catch (e) {

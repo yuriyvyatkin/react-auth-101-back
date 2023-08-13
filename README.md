@@ -39,6 +39,9 @@ cd react-auth-101-back
 ##### 3. Создать файл .env в корне проекта со следующими переменными и присвоить им соответствующие значения
 
 ```
+FRONTEND_BASE_URL=
+BACKEND_BASE_URL=
+
 JWT_SECRET=
 SENDGRID_API_KEY=
 
